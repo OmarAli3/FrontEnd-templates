@@ -363,4 +363,79 @@ section.design div.image img {
         display: none;
     }
 }
-/* End design section style  */
+/* End design section style */
+/* Start portfolio section style */
+section.portfolio ul.navigator {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+section.portfolio ul.navigator li {
+    padding: 10px;
+}
+section.portfolio ul.navigator li.active,
+section.portfolio ul.navigator li:hover {
+    background-color: var(--main-color);
+}
+section.portfolio .portfolio-cards {
+    margin-top: 60px;
+    display: grid;
+    gap: 0;
+    grid-template-columns: repeat(auto-fill, minmax(25%, 1fr));
+}
+.portfolio-cards .card {
+    position: relative;
+    overflow: hidden;
+}
+.portfolio-cards .card .caption {
+    position: absolute;
+    left: 0;
+    padding: 20px;
+    background-color: white;
+    width: 100%;
+    bottom: -100%;
+    transition: 0.3s;
+}
+.portfolio-cards .card .caption h4 {
+    font-weight: normal;
+    margin-bottom: 10px;
+}
+.portfolio-cards .card .caption p {
+    color: var(--main-color);
+}
+.portfolio-cards .card:hover .caption {
+    bottom: 0;
+}
+.portfolio-cards .card:hover img {
+    transform: rotate(10deg) scale(1.5);
+    -webkit-transform: rotate(10deg) scale(1.5);
+    -moz-transform: rotate(10deg) scale(1.5);
+    -ms-transform: rotate(10deg) scale(1.5);
+    -o-transform: rotate(10deg) scale(1.5);
+}
+.portfolio-cards .card img {
+    max-width: 100%;
+    transition: 0.3s;
+}
+@media (max-width: 991px) {
+    section.portfolio .portfolio-cards {
+        grid-template-columns: repeat(auto-fill, minmax(50%, 1fr));
+    }
+}
+@media (max-width: 767px) {
+    section.portfolio .portfolio-cards {
+        grid-template-columns: 1fr;
+    }
+}
+div.more {
+    width: 100vw;
+    margin: 40px 0;
+    text-align: center;
+}
+.portfolio-cards div.more a {
+    background-color: var(--main-color);
+    color: white;
+    text-decoration: none;
+    padding: 15px 20px;
+}
+/* End portfolio section style */
