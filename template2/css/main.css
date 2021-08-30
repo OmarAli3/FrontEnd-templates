@@ -8,12 +8,13 @@
 :root {
     --main-color: #19c8fa;
     --transparent-color: rgb(15 116 143 / 70%);
+    --section-padding: 100px;
 }
 html {
     scroll-behavior: smooth;
 }
 body {
-    font-family: "Work Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
 }
 /* general container */
 .container {
@@ -36,6 +37,61 @@ body {
     .container {
         width: 1170px;
     }
+}
+/* General heading style */
+section:not(.landing) {
+    padding: var(--section-padding) 0;
+}
+section:not(.landing) div.heading {
+    text-align: center;
+}
+div.heading h2 {
+    font-weight: normal;
+    font-size: 40px;
+    margin-bottom: 70px;
+    position: relative;
+}
+div.heading h2::before {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: #333;
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+div.heading h2::after {
+    content: "";
+    width: 14px;
+    height: 14px;
+    border: 2px solid #333;
+    position: absolute;
+    bottom: -38px;
+    left: 50%;
+    background-color: white;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+div.heading p {
+    width: 550px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+    max-width: 100%;
+    line-height: 2;
+    color: #777;
 }
 /* Start header style  */
 header {
@@ -149,7 +205,7 @@ section.landing div.text-content {
     justify-content: flex-end;
     position: relative;
 }
-section.landing div.text-content div{
+section.landing div.text-content div {
     max-width: 500px;
 }
 .landing div.text-content h2 {
@@ -162,17 +218,17 @@ section.landing div.text-content div{
     font-size: 14px;
     line-height: 2;
 }
-section.landing li.fas{
+section.landing li.fas {
     color: white;
     position: absolute;
 }
-section.landing li.fas:first-of-type{
+section.landing li.fas:first-of-type {
     left: 30px;
 }
-section.landing li.fas:last-of-type{
+section.landing li.fas:last-of-type {
     right: 30px;
 }
-section.landing div.overlay{
+section.landing div.overlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -180,7 +236,7 @@ section.landing div.overlay{
     height: 100%;
     background-color: rgb(0 0 0 / 60%);
 }
-section.landing ul.bullets{
+section.landing ul.bullets {
     list-style: none;
     display: flex;
     justify-content: space-between;
@@ -193,7 +249,7 @@ section.landing ul.bullets{
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
 }
-section.landing ul.bullets li{
+section.landing ul.bullets li {
     border: 1px solid white;
     width: 20px;
     height: 20px;
@@ -204,14 +260,47 @@ section.landing ul.bullets li{
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
 }
-section.landing ul.bullets li:nth-child(2){
+section.landing ul.bullets li:nth-child(2) {
     background-color: var(--main-color);
     border-color: var(--main-color);
 }
 @media (max-width: 767px) {
-    section.landing div.text-content{
+    section.landing div.text-content {
         width: 100%;
         justify-content: center;
     }
 }
 /* End landing section style  */
+/* Start services section style  */
+@media (min-width: 768px) {
+    section.services div.service-cards {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(440px, 1fr));
+        gap: 60px 40px;
+    }
+}
+div.service-cards .service {
+    display: flex;
+}
+div.service-cards .service h3 {
+    margin-bottom: 30px;
+    color: var(--main-color);
+}
+div.service-cards .service p {
+    line-height: 2;
+    color: #777;
+}
+div.service-cards .service i {
+    margin-right: 50px;
+}
+@media (max-width: 767px) {
+    div.service-cards .service{
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    div.service-cards .service i {
+        margin: 0 0 30px;
+    }
+}
+/* End services section style  */
