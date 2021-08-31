@@ -470,14 +470,14 @@ section.video div.text {
     -ms-transform: translateY(-50%);
     -o-transform: translateY(-50%);
 }
-section.video div.text h2{
+section.video div.text h2 {
     margin-bottom: 30px;
     font-weight: normal;
 }
-section.video div.text p{
+section.video div.text p {
     margin-bottom: 30px;
 }
-section.video div.text button{
+section.video div.text button {
     background-color: black;
     padding: 10px 20px;
     color: white;
@@ -485,12 +485,12 @@ section.video div.text button{
 }
 /* End video section style  */
 /* Start about section style */
-section.about{
+section.about {
     padding-bottom: 0;
     overflow: hidden;
     text-align: center;
 }
-section.about .container img{
+section.about .container img {
     position: relative;
     bottom: -120px;
     margin-top: -120px;
@@ -503,3 +503,61 @@ section.about .container img{
     }
 }
 /* End about section style */
+/* Start stats section style */
+section.stats {
+    background-image: url("../images/stats.png");
+    background-size: cover;
+    position: relative;
+}
+section.stats::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0 0 0 / 70%);
+}
+section.stats div.container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+section.stats div.container .card {
+    text-align: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    background-color: var(--transparent-color);
+}
+section.stats div.container .card i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+section.stats div.container .card .number {
+    font-size: 50px;
+    font-weight: bold;
+    margin: 20px 0;
+}
+@media (max-width: 991px) {
+    section.stats div.container .card {
+        flex-basis: 50%;
+    }
+}
+@media (max-width: 767px) {
+    section.stats div.container .card {
+        flex-basis: 100%;
+    }
+}
+/* End stats section style */
