@@ -561,3 +561,120 @@ section.stats div.container .card .number {
     }
 }
 /* End stats section style */
+/* Start our-skills section style */
+section.our-skills div.container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+@media (min-width:991px){
+    section.our-skills div.container > div{
+        flex-basis: 45%;
+    }
+}
+section.our-skills h3{
+    font-weight: normal;
+    margin-bottom: 30px;
+    text-align: center;
+}
+section.our-skills h3 + p{
+    line-height: 2;
+    color: #777;
+    text-align: center;
+    margin-bottom: 60px;
+}
+section.our-skills div.testimonials .card{
+    display: flex;
+    margin-bottom: 30px;
+}
+section.our-skills .card img{
+    width: 100px;
+    margin-right: 50px;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    align-self: flex-start;
+}
+section.our-skills .card .text{
+    line-height: 1.8;
+    border-bottom: 1px solid #ccc;
+}
+section.our-skills .card .text p:last-child{
+    text-align: end;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+section.our-skills ul.bullets{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+section.our-skills ul.bullets li{
+    width: 14px;
+    height: 14px;
+    border: 1px solid #aaa;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+}
+section.our-skills ul.bullets li:nth-child(2){
+    background-color: var(--main-color);
+    border: none;
+    margin: 0 10px;
+}
+section.our-skills div.skill{
+    margin-bottom: 40px;
+}
+section.our-skills div.skill label{
+    display: block;
+    margin-bottom: 15px;
+}
+section.our-skills div.skill .progress{
+    background-color: #dedadc;
+    height: 30px;
+}
+section.our-skills div.skill .prog-value{
+    display: block;
+    height: 100%;
+    background-color: var(--main-color);
+    position: relative;
+}
+section.our-skills div.skill .prog-value::before{
+    content: attr(data-progress);
+    background-color: black;
+    color: white;
+    position: absolute;
+    top: -40px;
+    right: -18px;
+    padding: 4px;
+    border-radius: 4px;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+}
+section.our-skills div.skill .prog-value::after{
+    content: "";
+    border: 8px solid;
+    border-color: black transparent transparent;
+    position: absolute;
+    right: -8px;
+    top: -15px;
+}
+@media (max-width:767px){
+    section.our-skills div.testimonials .card{
+        flex-direction: column;
+        text-align: center;
+    }
+    section.our-skills .card img{
+        align-self: center;
+        margin: 0 auto 20px;
+    }
+}
+/* End our-skills section style */
