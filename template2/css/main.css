@@ -860,3 +860,56 @@ section.subscribe input[type="submit"] {
     border-left: none;
 }
 /* End subscribe section style */
+/* Start contact section style */
+section.contact div.content {
+    display: grid;
+    grid-template-columns: 70% 1fr;
+    gap: 5%;
+}
+@media (max-width: 767px) {
+    section.contact div.content div {
+        grid-row: 1;
+    }
+    section.contact div.content {
+        grid-template-columns: 1fr;
+    }
+}
+section.contact div.content form {
+    display: flex;
+    flex-direction: column;
+}
+section.contact div.content form * {
+    margin-bottom: 30px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+section.contact div.content form textarea {
+    height: 200px;
+}
+section.contact div.content form button {
+    align-self: flex-end;
+    margin-bottom: 0;
+    color: white;
+    background-color: var(--main-color);
+    border: none;
+}
+section.contact div.contact-info {
+    line-height: 2;
+    color: #777;
+}
+@media (max-width: 767px) {
+    section.contact div.contact-info {
+        text-align: center;
+    }
+}
+section.contact div.contact-info h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: black;
+}
+section.contact div.address h4 {
+    margin-top: 30px;
+}
+/* End contact section style */
